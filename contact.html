@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.wallpapersafari.com/78/25/JU9bGD.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        .form-container p {
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #007BFF;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #007BFF;
+            font-size: 16px;
+            margin-top: 8px;
+            background-color: #f7f7f7;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0056b3;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-group .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .form-group .radio-group label {
+            font-weight: normal;
+            color: #333;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 80%;
+                padding: 20px;
+            }
+
+            button {
+                padding: 15px;
+            }
+        }
+
+        #contact {
+            padding: 3rem;
+            background-color: #e0f7f7;
+            text-align: center;
+            color: #007BFF;
+            margin-top: 30px;
+        }
+
+        #contact h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        #contact p {
+            font-size: 14px;
+        }
+
+        .help-message {
+            text-align: center;
+            font-size: 16px;
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .help-message p {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>We’re Here to Help!</h2>
+    <p>Have a question or need support? Fill out the form below and we’ll get back to you shortly.</p>
+
+    <form action="#" method="post">
+        <!-- User Name -->
+        <div class="form-group">
+            <label for="username">Full Name:</label>
+            <input type="text" id="username" name="username" placeholder="John Doe" required />
+        </div>
+
+        <!-- E-mail -->
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <!-- Phone Number -->
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="123-456-7890" required />
+        </div>
+
+        <!-- Message Box -->
+        <div class="form-group">
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder="Let us know how we can help you!" required></textarea>
+        </div>
+
+        <!-- Drop Down -->
+        <div class="form-group">
+            <label for="inquiry-type">Inquiry Type:</label>
+            <select id="inquiry-type" name="inquiry_type" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="booking">Booking</option>
+                <option value="feedback">Feedback</option>
+                <option value="support">Support</option>
+                <option value="complaints">Complaints</option>
+            </select>
+        </div>
+
+        <!-- Radio Buttons for Support Options -->
+        <div class="form-group">
+            <label>Preferred Support Channel:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="support_channel" value="live_chat" required /> Live Chat</label>
+                <label><input type="radio" name="support_channel" value="whatsapp" /> WhatsApp</label>
+                <label><input type="radio" name="support_channel" value="call" /> Call</label>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="referral">How did you hear about us?</label>
+          <select id="referral" name="referral">
+            <option value="">-- Choose one --</option>
+            <option value="google">Google Search</option>
+            <option value="social">Social Media</option>
+            <option value="friend">Friend or Family</option>
+            <option value="ads">Online Ads</option>
+            <option value="event">Event</option>
+          </select>
+        </div>
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="newsletter" name="newsletter" />
+          <label for="newsletter">Subscribe to our newsletter for updates & offers</label>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+<div class="help-message">
+    <p>We’re always happy to assist! Please fill in the form, and our support team will respond as soon as possible.</p>
+</div>
+
+<section id="contact">
+    <h2>Contact Information</h2>
+    <p>Address: 774, Double Road, Indiranagar, 2nd Stage, Bangalore</p>
+    <p>Contact No: (080) 41269444, 41269888</p>
+    <p>Email: info@travelly.com</p>
+    <p>Website: www.travelly.com</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💳 Secure Payment</title>
+  <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+
+  <div class="payment-container">
+    <h2>💳 Make a Payment</h2>
+    <form action="/process-payment" method="POST">
+      <label for="name">👤 Cardholder Name</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+      <label for="card-number">💳 Card Number</label>
+      <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="16" required>
+
+      <label for="expiry">📅 Expiry Date</label>
+      <input type="month" id="expiry" name="expiry" required>
+
+      <label for="cvv">🔒 CVV</label>
+      <input type="password" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="travel-insurance" name="travelInsurance">
+        <label for="travel-insurance">🛡 Add Travel Insurance</label>
+      </div>
+      <p class="checkbox-description">Total bill + 2000 rupees</p>
+
+      <button type="submit">🚀 Pay Now</button>
+      <div class="success" id="successMsg"></div>
+    </form>
+  </div>
+
+</body>
+</html>

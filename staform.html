@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Booking Form ✨</title>
+  <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🎉 Best Seller! 10% OFF</div>
+    <div class="image-container">
+      <img src="FormTop Image.jpg" alt="Trip pic" />
+    </div>
+    <h1>🌟 Book Your Dream Trip! 🌟</h1>
+    <p class="subtitle">🚀 Book now and enjoy a 10% early bird discount! 🍷🗼✨</p>
+
+    <form>
+      <fieldset>
+      <legend>Standard package</legend>
+      <h2>👤 Personal Informations</h2>
+      <label for="text">Full Name</label>
+      <input type="text"  name="Fullname" id="text" required>
+      <label>Aadhar Number</label>
+      <input type="text" name="Aadharnum"required>
+      <label>Passport Number</label>
+      <input type="text" name="Passportnum" required>
+
+      <h2>📧 Contact Informations</h2>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" title="Enter 10-digit phone number" placeholder="9876543210" />
+
+      <h2>🌍 Trip Details</h2>
+      <label><h2>Instruction to choose destinations</h2></label>
+      <label>1.Click normally → selects one, deselects others.</label>
+      <label>2.Hold Ctrl/Cmd + Click → selects/deselects individual options, keeping others selected.</label><br>
+      <label for="Destination">Destinations</label>
+      <select name="Destination" id="Destination" multiple required>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="new_york">New York</option>
+        <option value="rome">Rome</option>
+        <option value="bali">Bali</option>
+      </select>
+      <br><br>
+      <label for= "numT">Number of Travelers</label>
+      <input type="number" min="1" id="numT" required>
+
+      <label>🍽️ Meals</label>
+      <p>Breakfast: Included</p>
+      <div class="form-check">
+        <input type="checkbox" id="Lunch" name="Lunch">
+        <label for="Lunch">🍱 Include Lunch</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="Dinner" name="Dinner">
+        <label for="Dinner">🍽️ Include Dinner</label>
+      </div>
+      
+      <label for="dd">Departure Date</label>
+      <input type="date"id="dd" required>
+
+      <label for="rd">Return Date</label>
+      <input type="date" id="rd" required>
+
+      <label class="checkbox" for="TC">
+        I agree to the <a href="terms.html" target="_blank">terms & conditions</a>
+        <input type="checkbox" id="TC" name="TC" required>
+    </label>
+
+      <button type="button" onclick="window.location.href='payment.html'">💳 Proceed to Payment</button>
+    </fieldset>
+  </form>
+  </div>
+</body>
+</html>
