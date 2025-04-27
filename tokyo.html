@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🏯 Tokyo Booking Form 🎌</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f5a7bc, #f3b7d1);
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      max-width: 800px;
+      width: 100%;
+      padding: 40px;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #ff4081;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 16px rgba(255, 64, 129, 0.4);
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a2d55;
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #6c4b6e;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #4a2d55;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #4a2d55;
+      box-shadow: 0 0 0 3px rgba(74, 45, 85, 0.2);
+      outline: none;
+    }
+
+    .date-range {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 14px;
+      background-color: #4a2d55;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #2f1a32;
+    }
+
+    label.checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    label.checkbox a {
+      color: #4a2d55;
+      text-decoration: underline;
+    }
+
+    .img-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .img-container img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">🌸 Tokyo Special!</div>
+    <div class="img-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-uGhZhGJU6tqInK8oEeIoNn7IWQw5bHD17Q&s" alt="Tokyo Skyline with Cherry Blossoms" />
+    </div>
+    <h1>🗼 Book Your Dream Trip to Tokyo 🎌</h1>
+    <p class="subtitle">🏙 Immerse yourself in the beauty of Tokyo's skyline, culture, and stunning cherry blossoms 🌸</p>
+    <form>
+      <label for="name">👤 Full Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g. Sakura Tanaka" required />
+
+      <label for="email">📧 Email</label>
+      <input type="email" id="email" name="email" placeholder="e.g. sakura@example.com" required />
+
+      <label for="aadhaar">🇮🇳 Aadhaar Number</label>
+      <input type="text" id="aadhaar" name="aadhaar" placeholder="XXXX-XXXX-XXXX" required />
+
+      <label for="passport">🛂 Passport Number</label>
+      <input type="text" id="passport" name="passport" placeholder="e.g. T1234567" required />
+
+      <label for="hotel">🏨 Preferred Hotel</label>
+      <select id="hotel" name="hotel">
+        <option>Shibuya Stay</option>
+        <option>Shinjuku Comfort</option>
+        <option>Ginza Elite</option>
+      </select>
+
+      <label for="price">💸 Price Range (INR)</label>
+      <select id="price" name="price">
+        <option>Below ₹50,000</option>
+        <option>₹50,000 - ₹1,00,000</option>
+        <option>Above ₹1,00,000</option>
+      </select>
+
+      <label for="stay">📅 Stay Duration</label>
+      <div class="date-range">
+        <input type="date" name="from" required />
+        <input type="date" name="to" required />
+      </div>
+
+      <label for="requests">🎌 Special Requests</label>
+      <textarea id="requests" rows="4" name="requests" placeholder="Any special arrangements or needs..."></textarea>
+
+      <label class="checkbox">
+        <input type="checkbox" required />
+        I agree to the <a href="terms.html" target="_blank">terms and conditions</a>
+      </label>
+
+      <button type="submit"><a href="payment.html"> 🏯 Confirm Booking</a></button>
+    </form>
+  </div>
+</body>
+</html>
