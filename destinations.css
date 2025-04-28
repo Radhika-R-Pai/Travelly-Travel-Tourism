@@ -1,0 +1,56 @@
+.destinations {
+        padding: 4rem 2rem;
+        text-align: center;
+        background: #fef6e4; /* Warm cream */
+        background: url('https://wallpapers.com/images/hd/minimalist-blue-3840-x-2160-28xsn0yijqeouf1l.jpg');
+        background-size: cover;
+        }
+
+        .destinations h2 {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        color: #4b3f72;
+        }
+
+        .sub-head {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+        color: #3f3268;
+        }
+
+        .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        }
+
+        .card {
+        background: #ffffff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+        max-width: 300px;
+        transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+        transform: scale(1.03);
+        }
+
+        .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        }
+
+        .card h3 {
+        margin: 1rem 0 0.5rem;
+        color: #70a1a1; /* Muted teal */
+        }
+
+        .card p {
+        padding: 0 1rem 1.5rem;
+        font-size: 0.95rem;
+        color: #4b3f72;
+        }
