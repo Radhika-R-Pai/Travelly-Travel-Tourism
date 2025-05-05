@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Plan Your Trip</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ffffff 60%, #fcd1d1 100%);
+      background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f8c8dc' fill-opacity='0.2'%3E%3Ccircle cx='10' cy='10' r='1.2'/%3E%3Ccircle cx='4' cy='16' r='0.8'/%3E%3Ccircle cx='16' cy='4' r='0.8'/%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3Ccircle cx='19' cy='19' r='0.5'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: auto;
+      color: #333;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 700px;
+      background: #fff;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #d6336c;
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: auto;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Plan Your Trip 🧳</h1>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="destination">Choose Destination</label>
+      <select id="destination" required>
+        <option value="">-- Select --</option>
+        <option>Beach</option>
+        <option>Mountains</option>
+        <option>City</option>
+        <option>Historical Sites</option>
+      </select>
+
+      <label for="dates">Travel Dates</label>
+      <input type="text" id="dates" placeholder="e.g. June 10 - June 15">
+
+      <label for="notes">Special Requirements</label>
+      <textarea id="notes" rows="4" placeholder="Tell us more about your preferences..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
