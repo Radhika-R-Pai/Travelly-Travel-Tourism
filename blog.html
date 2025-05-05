@@ -199,6 +199,10 @@
       .travel-tips, .travel-stories {
         grid-template-columns: 1fr;
       }
+      nav a, h1, h2, h3, p {
+      text-decoration: none !important;
+    }
+
     }
   </style>
 </head>
@@ -206,52 +210,47 @@
 <body>
 
   <!-- Navigation -->
-  <nav>
-    <h1>Travelly</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="destinations.html">Destinations</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="packages.html">Packages</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    
-  </nav>
-  
+<nav>
+  <h1>Travelly 🌍</h1>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="destinations.html"> Destinations</a></li>
+    <li><a href="blog.html"> Blog</a></li>
+    <li><a href="package.html"> Packages</a></li>
+    <li><a href="contact.html"> Contact</a></li>
+    <li><a href="whychoose us.html"> 💡Why Choose Us</a></li> <!-- Fixed href -->
+    <li><a href="gallery.html">📸 Gallery</a></li>
+  </ul>
+</nav>
 
-  <!-- Header -->
-  <header>
-    <h2>📝 Travel Blog</h2>
-    <p>Real stories, practical tips & travel inspiration from around the globe.</p>
-  </header>
+<!-- Header -->
+<header>
+  <h2>📝 Travel Blog 🌍</h2>
+  <p>Real stories, practical tips & travel inspiration from around the globe.</p>
+</header>
 
-  <!-- Trending Destinations -->
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title">🔥 Trending Destinations</h2>
-    <div id="trending-destinations" class="trending-destinations"></div>
-  </div>
+<!-- Blog Posts -->
+<div id="blog-posts" class="container" data-aos="zoom-in"></div>
 
-  <!-- Blog Posts -->
-  <div id="blog-posts" class="container" data-aos="zoom-in"></div>
-
-  <!-- Travel Stories -->
-  <div class="container" data-aos="fade-up">
-    <h2 class="section-title">📖 Travel Stories</h2>
-    <div class="travel-stories">
-      <div class="story">
-        <h3>My Backpacking Adventure in South America</h3>
-        <p>From hiking the Inca Trail to exploring the Amazon rainforest, my backpacking trip was nothing short of life-changing. The people, the culture, and the landscapes were beyond imagination.</p>
-      </div>
-      <div class="story">
-        <h3>The Magic of Solo Travel in Japan</h3>
-        <p>Exploring Tokyo, Kyoto, and Osaka on my own was a challenge, but it helped me grow so much. Japan is a country full of tradition and modernity. Every moment was an adventure!</p>
-      </div>
-      <div class="story">
-        <h3>A Journey Through Europe: 10 Cities in 30 Days</h3>
-        <p>From the cobblestone streets of Prague to the canals of Venice, this European adventure was a whirlwind of culture, food, and unforgettable memories. Traveling solo allowed me to experience each city in a unique way.</p>
-      </div>
+<!-- Travel Stories -->
+<div class="container" data-aos="fade-up">
+  <h2 class="section-title">📖 Travel Stories</h2>
+  <div class="travel-stories">
+    <div class="story">
+      <h3>My Backpacking Adventure in South America </h3>
+      <p>From hiking the Inca Trail to exploring the Amazon rainforest, my backpacking trip was nothing short of life-changing.</p>
+    </div>
+    <div class="story">
+      <h3>The Magic of Solo Travel in Japan 🇯🇵</h3>
+      <p>Exploring Tokyo, Kyoto, and Osaka on my own was a challenge, but it helped me grow so much. Japan is full of tradition and modernity.</p>
+    </div>
+    <div class="story">
+      <h3>A Journey Through Europe: 10 Cities in 30 Days 🇪🇺</h3>
+      <p>From the cobblestone streets of Prague to the canals of Venice, this European adventure was a whirlwind of culture, food, and unforgettable memories.</p>
     </div>
   </div>
+</div>
+
 
   <!-- Travel Tips -->
   <div class="container" data-aos="fade-up">
@@ -284,77 +283,5 @@
   <footer>
     <p>© 2025 Travelly. Crafted with ✈ by Team Travelly</p>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-   const blogPosts = [
-  {
-    title: '🏖 Exploring the Wonders of Santorini',
-    img : 'https://lp-cms-production.imgix.net/2025-03/Shutterstock92342251.jpg?auto=format,compress&q=72&w=1440&h=810&fit=crop',
-    excerpt: 'Santorini is known for its white-washed houses, stunning sunsets, and crystal-clear waters.',
-    content: 'From the vibrant sunsets in Oia to the ancient ruins of Akrotiri, Santorini offers a perfect blend of history, culture, and relaxation. Explore its charming streets, enjoy local cuisine, and take a dip in the Aegean Sea. Santorini is famous for its white-washed buildings with blue-domed roofs, making it one of the most iconic and photographed places in the world. It is also home to some of the best beaches in the Mediterranean, with clear waters ideal for a relaxing day in the sun.'
-  },
-  {
-    title: '🏙 Discovering the Hidden Gems of Prague',
-    img: 'https://cdn-imgix.headout.com/media/images/33b1833b42e8af419d4a0d8897eb2c48-This%20is%20a%20Photograph%20of%20St.%20Vitus%20Cathedral.jpg?auto=format&w=702.4499999999999&h=401.4&q=90&fit=crop&ar=7%3A4&crop=faces',
-    excerpt: 'Prague, with its cobbled streets and fairy-tale architecture, is a city steeped in history.',
-    content: 'From the iconic Charles Bridge to the majestic Prague Castle, this city will transport you back in time. Stroll through Old Town Square, admire the astronomical clock, and enjoy a hearty Czech meal in a traditional pub. The beauty of Prague is not just in its famous landmarks but in its hidden corners, like the quaint cafes in the Lesser Town or the peaceful parks along the Vltava River. With its rich history and vibrant cultural scene, Prague is a must-visit for any traveler.'
-  },
-  {
-    title: '🌍 Exploring the Wonders of Egypt: Pyramids & Beyond',
-    img: 'https://res.cloudinary.com/aenetworks/image/upload/c_fill,w_1920,h_960,g_auto/dpr_auto/f_auto/q_auto:eco/v1/the-sphinx-gettyimages-1183584133?_a=BAVAZGDX0',
-    excerpt: 'Egypt’s ancient wonders, including the Pyramids of Giza, continue to captivate travelers.',
-    content: 'Take a journey through the heart of ancient civilization with a visit to the Pyramids of Giza, the Sphinx, and the temples of Luxor. Cruise down the Nile and explore Cairo’s vibrant markets to experience the rich culture and history of Egypt. Egypt is also home to some of the most awe-inspiring archaeological sites, such as the Valley of the Kings and the temples of Karnak. Beyond the pyramids, travelers can immerse themselves in the country’s ancient traditions, sample authentic Egyptian cuisine, and experience the hospitality of the local people.'
-  }
-];
-
-
-    const trendingDestinations = [
-      { name: 'Bali', img: 'https://www.pelago.com/img/destinations/bali/0619-0941_bali-xlarge.webp', description: 'Tropical beaches and serene temples.' },
-      { name: 'Paris', img: 'https://www.chooseparisregion.org/sites/default/files/news/6---Tour-Eiffel_AdobeStock_644956457_1920_72dpi.jpg', description: 'City of romance and timeless beauty.' },
-      { name: 'Tokyo', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/960px-Skyscrapers_of_Shinjuku_2009_January.jpg', description: 'Futuristic neon meets ancient tradition.' }
-    ];
-
-    const blogPostsContainer = document.getElementById('blog-posts');
-    blogPosts.forEach((post, index) => {
-      blogPostsContainer.innerHTML += `
-        <div class="blog-post" data-aos="fade-up" data-aos-delay="${index * 100}">
-          <img src="${post.img}" alt="Blog Image">
-          <div class="blog-content">
-            <h3>${post.title}</h3>
-            <p>${post.excerpt}</p>
-            <button class="read-more-btn" onclick="toggleContent(this)">Read More</button>
-            <div class="extra-content">
-              <p>${post.content}</p>
-            </div>
-          </div>
-        </div>
-      `;
-    });
-
-    const trendingDestinationsContainer = document.getElementById('trending-destinations');
-    trendingDestinations.forEach((destination) => {
-      trendingDestinationsContainer.innerHTML += `
-        <div class="destination">
-          <img src="${destination.img}" alt="${destination.name}">
-          <div class="destination-info">
-            <h3>${destination.name}</h3>
-            <p>${destination.description}</p>
-          </div>
-        </div>
-      `;
-    });
-
-    function toggleContent(button) {
-      const extraContent = button.nextElementSibling;
-      extraContent.style.display = extraContent.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
 </body>
 </html>
