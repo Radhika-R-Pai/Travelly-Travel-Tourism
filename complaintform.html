@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complaint.us</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      background-image: url('http://www.pixelstalk.net/wp-content/uploads/2016/08/Free-Desktop-Travel-Backgrounds.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      margin: 0;
+      padding: 20px;
+      color: blue;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2, h3, label {
+      color: blue;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    input[type="file"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background: #fafafa;
+      color: black; /* User input text color */
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      margin-top: 10px;
+      color: blue;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: block;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .submit-button-container {
+      text-align: center;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2 style="text-align: center;">Complaint Details</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="relationship">Your Relationship to Us</label>
+      <select id="relationship" name="relationship">
+        <option value="">-- Select --</option>
+        <option value="customer">Customer</option>
+        <option value="employee">Employee</option>
+        <option value="vendor">Vendor</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="type">Nature of Complaint</label>
+      <select id="type" name="type">
+        <option value="">-- Select --</option>
+        <option value="service">Service Issue</option>
+        <option value="staff">Staff Behavior</option>
+        <option value="product">Product Defect</option>
+        <option value="safety">Safety Concern</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="description">Detailed Description</label>
+      <textarea id="description" name="description" rows="5"></textarea>
+
+      <label for="persons">Persons Involved (if known)</label>
+      <input type="text" id="persons" name="persons">
+
+      <label for="repeat">Have you experienced this issue before?</label>
+      <select id="repeat" name="repeat">
+        <option value="">-- Select --</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="impact">How did this issue impact you?</label>
+      <select id="impact" name="impact">
+        <option value="">-- Select --</option>
+        <option value="financial">Financial loss</option>
+        <option value="emotional">Emotional distress</option>
+        <option value="time">Time wasted</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="severity">How serious is this issue? (1 = Minor, 5 = Critical)</label>
+      <input type="number" id="severity" name="severity" min="1" max="5">
+
+      <label for="evidence">Attach Evidence (photos, files)</label>
+      <input type="file" id="evidence" name="evidence">
+
+      <label for="outcome">What outcome would you like?</label>
+      <textarea id="outcome" name="outcome" rows="3"></textarea>
+
+      <h3>Consent and Acknowledgment</h3>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="contactConsent"> I agree to be contacted for follow-up</label>
+        <label><input type="checkbox" name="anonymous"> I want to remain anonymous</label>
+        <label><input type="checkbox" name="acknowledgment" required> I confirm that the information provided is accurate</label>
+      </div>
+
+      <div class="submit-button-container">
+        <button type="submit">Submit</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
