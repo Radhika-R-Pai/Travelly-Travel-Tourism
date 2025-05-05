@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>✨ Paris Booking Form ✨</title>
- 
+  
   <style>
     * {
       box-sizing: border-box;
@@ -63,6 +63,20 @@
       color: #6a6a6a;
       font-size: 1rem;
       margin-bottom: 30px;
+    }
+
+    .description {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .description p {
+      font-size: 1rem;
+      color: #3a3a8f;
     }
 
     form {
@@ -134,6 +148,25 @@
       animation: fadeIn 1.2s ease-in-out;
     }
 
+    .package-description {
+      margin-top: 10px;
+      color: #6a6a6a;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .price {
+      font-size: 1.2rem;
+      color: #3a3a8f;
+      margin-top: 10px;
+    }
+
+    .price .original-price {
+      text-decoration: line-through;
+      margin-right: 10px;
+      color: #ff4b91;
+    }
+
     @media (max-width: 600px) {
       .container {
         padding: 20px;
@@ -146,11 +179,20 @@
     <div class="badge">🎉 Best Seller! 25% OFF</div>
     <div class="image-container">
       <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Paris_Night.jpg" alt="Beautiful view of Paris at night with Eiffel Tower" />
+      <div class="package-description">
+        <p>✨ 4 Days & 3 Nights in the heart of Paris</p>
+        <p class="price">
+          <span class="original-price">₹80,000</span> For you: ₹60,000 🎉
+        </p>
+      </div>
     </div>
     <h1>🌟 Book Your Dream Trip to Paris 🌟</h1>
     <p class="subtitle">🚀 Paris is our most loved destination! Book now and get a special 25% discount on early reservations. 🍷🌿</p>
+    <div class="description">
+      <p>Includes luxury hotel stay, daily breakfast, guided tours, and complimentary airport transfers! 
+         <strike>₹80,000</strike> <span style="color: #ff4b91; font-weight: bold;">Special Price: ₹60,000 per person (25% OFF!)</span></p>
+    </div>
     <form>
-      <!-- Personal Details Section -->
       <label for="name">👤 Full Name</label>
       <input type="text" id="name" name="name" required />
 
@@ -163,7 +205,9 @@
       <label for="passport">🏛 Passport Number</label>
       <input type="text" id="passport" name="passport" required />
 
-      <!-- Preferences Section -->
+      <label for="people">👥 Number of People</label>
+      <input type="number" id="people" name="people" min="1" required />
+
       <label for="hotel">🏨 Preferred Hotel</label>
       <select id="hotel" name="hotel">
         <option>Hotel de Lumière</option>
@@ -171,32 +215,21 @@
         <option>Champs-Élysées Stay</option>
       </select>
 
-      <label for="price">💰 Price Range (INR)</label>
-      <select id="price" name="price">
-        <option>Below ₹70,000</option>
-        <option>₹70,000 - ₹1,50,000</option>
-        <option>Above ₹1,50,000</option>
-      </select>
-
-      <!-- Travel Dates Section -->
-      <label for="stay">📅 Stay Duration</label>
+      <label for="stay">📅 Travel Dates</label>
       <div class="date-range">
         <input type="date" name="from" required />
         <input type="date" name="to" required />
       </div>
 
-      <!-- Requests Section -->
-      <label for="requests">💭 Special Requests</label>
+      <label for="requests">💭 Special Requests or Dietary Preferences</label>
       <textarea id="requests" rows="4" name="requests"></textarea>
 
-      <!-- Agreement Section -->
       <label class="checkbox">
         <input type="checkbox" required />
         I agree to the <a href="terms.html" target="_blank">terms and conditions</a>
       </label>
 
-      <!-- Submit Button -->
-      <button type="submit"><a href="payment.html">🚀 Confirm Booking</a></button>
+      <button type="submit">🚀 Confirm Booking</button>
     </form>
   </div>
 </body>
